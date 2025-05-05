@@ -1,19 +1,37 @@
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --header-bg: #007BFF;
+    --header-hover: #0056b3;
+    --sidebar-bg: #007BFF;
+    --accordion-bg: #fff;
+    --table-border: #ddd;
+    --highlight-bg: #e7f3ff;
+    --highlight-border: #007BFF;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --accordion-bg: #2a2a2a;
+    --table-border: #444;
+    --highlight-bg: #2a3a5a;
+    --highlight-border: #4da8ff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 header {
-    background-color: #007BFF;
+    background-color: var(--header-bg);
     color: white;
     padding: 15px;
     display: flex;
@@ -30,17 +48,22 @@ header h1 {
     font-size: 24px;
 }
 
-#menu-btn {
-    font-size: 24px;
-    cursor: pointer;
-}
-
-#theme-toggle {
+#menu-btn, #theme-toggle {
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
     color: white;
+    transition: transform 0.2s;
+}
+
+#menu-btn:hover, #theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+#menu-btn:focus, #theme-toggle:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
 }
 
 #sidebar {
@@ -49,9 +72,9 @@ header h1 {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #007BFF;
+    background-color: var(--sidebar-bg);
     color: white;
-    transition: left 0.3s;
+    transition: left 0.3s ease;
     z-index: 999;
 }
 
@@ -73,10 +96,14 @@ header h1 {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    display: block;
+    padding: 5px;
 }
 
-#sidebar ul li a:hover {
+#sidebar ul li a:hover, #sidebar ul li a:focus {
     text-decoration: underline;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 main {
@@ -89,34 +116,33 @@ main {
 
 .accordion {
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--table-border);
     border-radius: 5px;
     overflow: hidden;
 }
 
 .accordion-header {
-    background-color: #007BFF;
+    background-color: var(--header-bg);
     color: white;
     padding: 15px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s;
+    border: none;
+    width: 100%;
+    text-align: left;
 }
 
-.accordion-header:hover {
-    background-color: #0056b3;
+.accordion-header:hover, .accordion-header:focus {
+    background-color: var(--header-hover);
+    outline: none;
 }
 
 .accordion-content {
     padding: 15px;
     display: none;
-    background-color: white;
-    color: #333;
-}
-
-body.dark-mode .accordion-content {
-    background-color: #2a2a2a;
-    color: #e0e0e0;
+    background-color: var(--accordion-bg);
+    color: var(--text-color);
 }
 
 .accordion-content.active {
@@ -137,36 +163,26 @@ body.dark-mode .accordion-content {
 }
 
 .comparison-table th, .comparison-table td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--table-border);
     padding: 10px;
     text-align: left;
 }
 
 .comparison-table th {
-    background-color: #007BFF;
+    background-color: var(--header-bg);
     color: white;
 }
 
 body.dark-mode .comparison-table th {
-    background-color: #0056b3;
-}
-
-body.dark-mode .comparison-table td {
-    border-color: #444;
-    background-color: #2a2a2a;
+    background-color: var(--header-hover);
 }
 
 .highlight-box {
-    background-color: #e7f3ff;
-    border-left: 5px solid #007BFF;
+    background-color: var(--highlight-bg);
+    border-left: 5px solid var(--highlight-border);
     padding: 15px;
     margin: 15px 0;
     border-radius: 5px;
-}
-
-body.dark-mode .highlight-box {
-    background-color: #2a3a5a;
-    border-left-color: #4da8ff;
 }
 
 @media (max-width: 768px) {
@@ -185,5 +201,19 @@ body.dark-mode .highlight-box {
 
     .accordion-header {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    #menu-btn, #theme-toggle {
+        font-size: 20px;
+    }
+
+    main {
+        margin-top: 60px;
     }
 }
