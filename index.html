@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apostila de Cosmetologia com informações detalhadas sobre cosméticos, cuidados com a pele e cabelos, e tendências do mercado brasileiro.">
+    <meta name="keywords" content="cosmetologia, cosméticos, cuidados com a pele, cabelos, anti-idade, acne, melasma">
+    <meta name="author" content="xAI">
     <title>Apostila de Cosmetologia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <span id="menu-btn">☰</span>
+        <button id="menu-btn" aria-label="Abrir menu lateral" aria-controls="sidebar" aria-expanded="false">☰</button>
         <h1>Apostila de Cosmetologia</h1>
-        <button id="theme-toggle">🌙</button>
+        <button id="theme-toggle" aria-label="Alternar modo escuro">🌙</button>
     </header>
 
-    <nav id="sidebar">
+    <nav id="sidebar" aria-label="Menu de navegação lateral">
         <ul>
             <li><a href="#introducao">Introdução</a></li>
             <li><a href="#classificacao">Classificação de Cosméticos</a></li>
@@ -38,12 +41,456 @@
     </nav>
 
     <main>
-        <!-- Seções anteriores mantidas (Introdução até Xampus) -->
-        <!-- Adicionando seções restantes -->
+        <section id="introducao" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="introducao-content">Introdução</button>
+            <div id="introducao-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Cosmetologia é a ciência que estuda o desenvolvimento, a produção e a aplicação de produtos cosméticos para cuidados com a pele, cabelos, unhas e higiene pessoal. No Brasil, o setor de cosméticos é um dos mais dinâmicos, movimentando R$ 130 bilhões em 2024 (ABIHPEC), com forte influência de ingredientes naturais amazônicos e adaptação às condições tropicais, como alta umidade e exposição solar. A cosmetologia combina química, biologia e dermatologia para criar formulações seguras e eficazes.</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Melhorar a aparência, proteger e manter a saúde da pele e cabelos, respeitando a diversidade de tipos e tons.</li>
+                        <li><strong>Regulamentação:</strong> A Anvisa classifica cosméticos em Grau 1 (baixo risco, ex.: xampus) e Grau 2 (risco moderado, ex.: protetores solares), exigindo testes de segurança (ISO 22716).</li>
+                        <li><strong>Tendências:</strong> Sustentabilidade (embalagens recicláveis, fórmulas veganas) e inclusão (produtos para peles negras e cabelos cacheados).</li>
+                    </ul>
+                    O mercado brasileiro destaca ativos como óleo de buriti e manteiga de cupuaçu, que atendem à demanda por hidratação e proteção em climas quentes.</p>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Defina cosmetologia e cite dois exemplos de cosméticos Grau 2.</li>
+                    <li>Pesquise a importância de um ativo amazônico em cosméticos.</li>
+                    <li>Consulte a RDC 7/2015 da Anvisa. Qual é a exigência para registro de cosméticos?</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Curiosidade</h4>
+                    <p>O Brasil é o 4º maior mercado de cosméticos do mundo, com 13% das vendas globais (Euromonitor, 2024).</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Cosmetologia" alt="Laboratório de cosmetologia com frascos de produtos naturais" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="classificacao" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="classificacao-content">Classificação de Cosméticos</button>
+            <div id="classificacao-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Cosméticos são classificados por função, forma física e público-alvo, atendendo a necessidades estéticas e de higiene. No Brasil, a Anvisa regula a categorização, garantindo segurança e eficácia, enquanto o mercado prioriza produtos multifuncionais (ex.: hidratante com FPS).</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Por Função:</strong> Higiene (xampus, sabonetes), cuidado (cremes, condicionadores), maquiagem (bases, sombras), proteção (FPS), fragrâncias (perfumes).</li>
+                        <li><strong>Por Forma:</strong> Cremes, géis, loções, pós, aerossóis.</li>
+                        <li><strong>Por Público:</strong> Infantil, adulto, geriátrico, masculino, feminino, unissex.</li>
+                    </ul>
+                    A Anvisa exige rotulagem clara (INCI) e testes de estabilidade. Fórmulas brasileiras destacam óleos nativos (ex.: andiroba) para peles tropicais.</p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>Xampu de limpeza com óleo de copaíba.</li>
+                    <li>Protetor solar FPS 50 com buriti.</li>
+                    <li>Base líquida oil-free para peles oleosas.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Classifique três cosméticos por função e forma.</li>
+                    <li>Pesquise um cosmético infantil. Quais são suas restrições?</li>
+                    <li>Analise um rótulo. Qual é a categoria do produto?</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Cosméticos infantis devem ter pH neutro (6,5-7,5) para evitar irritações.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Classificação" alt="Variedade de cosméticos classificados por função" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="componentes" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="componentes-content">Componentes Essenciais</button>
+            <div id="componentes-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Componentes essenciais são os ingredientes que definem a funcionalidade, textura e estabilidade de cosméticos. No Brasil, a preferência por ativos naturais (ex.: óleos amazônicos) cresce 20% ao ano (ABIHPEC, 2024).</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Veículos (50-80%):</strong> Água, óleos, álcoois, formam a base.</li>
+                        <li><strong>Ativos (0,5-5%):</strong> Pantenol, vitamina C, retinol, conferem benefícios específicos.</li>
+                        <li><strong>Emulsificantes (2-10%):</strong> Lecitina, estearato, estabilizam misturas.</li>
+                        <li><strong>Conservantes (0,1-1%):</strong> Parabenos, fenoxietanol, previnem contaminação.</li>
+                    </ul>
+                    A Anvisa regula conservantes (máx. 0,8% para parabenos) e exige testes de irritação. Fórmulas brasileiras usam óleos como patauá para hidratação.</p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>Creme com pantenol 2% e óleo de pracaxi.</li>
+                    <li>Xampu com lecitina e extrato de guaraná.</li>
+                    <li>Sérum com vitamina C 15% e fenoxietanol.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Identifique os componentes de um creme hidratante no rótulo.</li>
+                    <li>Pesquise a função de um emulsificante em cosméticos.</li>
+                    <li>Proponha uma fórmula com um ativo brasileiro.</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Conservantes mal dosados podem causar alergias. Siga as normas da Anvisa.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Componentes" alt="Ingredientes cosméticos, como óleos e ativos" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="nomenclatura" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="nomenclatura-content">Nomenclatura INCI</button>
+            <div id="nomenclatura-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>A nomenclatura INCI (International Nomenclature of Cosmetic Ingredients) padroniza os nomes de ingredientes em rótulos, facilitando identificação global. No Brasil, é obrigatória pela Anvisa (RDC 7/2015).</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Estrutura:</strong> Nomes em inglês ou latim (ex.: <i>Aqua</i> para água, <i>Butyrospermum Parkii Butter</i> para karité).</li>
+                        <li><strong>Ordem:</strong> Ingredientes listados por concentração decrescente (acima de 1%).</li>
+                        <li><strong>Exceções:</strong> Ativos abaixo de 1% podem ser listados no final.</li>
+                    </ul>
+                    O Brasil contribui com 500+ ingredientes INCI, como <i>Mauritia Flexuosa Fruit Oil</i> (buriti).</p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li><i>Copaifera Officinalis Resin</i> (óleo de copaíba).</li>
+                    <li><i>Theobroma Grandiflorum Seed Butter</i> (cupuaçu).</li>
+                    <li><i>Tocopherol</i> (vitamina E).</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Analise um rótulo. Identifique três ingredientes INCI.</li>
+                    <li>Pesquise o INCI de um ativo brasileiro.</li>
+                    <li>Por que a ordem dos ingredientes é importante?</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Curiosidade</h4>
+                    <p>O INCI inclui 20.000+ termos, atualizados anualmente pela PCPC (EUA).</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=INCI" alt="Rótulo com nomenclatura INCI de cosméticos" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="pele" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="pele-content">A Pele</button>
+            <div id="pele-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>A pele é o maior órgão do corpo, protegendo contra agentes externos e regulando temperatura. No Brasil, a diversidade de fototipos (II a VI) e o clima tropical exigem cuidados específicos, como hidratação e fotoproteção.</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Estrutura:</strong> Epiderme (barreira), derme (colágeno, elastina), hipoderme (gordura).</li>
+                        <li><strong>Tipos:</strong> Normal, oleosa, seca, mista, sensível.</li>
+                        <li><strong>Fototipos:</strong> I-VI (Fitzpatrick), com maior prevalência de IV-V no Brasil.</li>
+                    </ul>
+                    A Anvisa exige testes de irritação para produtos de pele (OECD 404). Ativos como niacinamida (5%) são populares para peles tropicais.</p>
+                <h3>Práticas</h3>
+                <p>Rotina básica:
+                    <ul>
+                        <li><strong>Limpeza:</strong> Gel suave (pH 5,5), 2x/dia.</li>
+                        <li><strong>Hidratação:</strong> Cremes com glicerina (5%) ou ácido hialurônico.</li>
+                        <li><strong>Proteção:</strong> FPS 30+ amplo espectro.</li>
+                    </ul>
+                </p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>Gel de limpeza com niacinamida 4%.</li>
+                    <li>Hidratante com óleo de buriti.</li>
+                    <li>FPS 50 com óxido de zinco.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Identifique seu tipo de pele. Qual rotina é ideal?</li>
+                    <li>Pesquise um ativo para peles oleosas.</li>
+                    <li>Compare FPS para fototipos IV e VI.</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Peles sensíveis requerem produtos sem fragrâncias ou álcool.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Pele" alt="Estrutura da pele com camadas visíveis" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="cabelos" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="cabelos-content">Cabelos e Pelos</button>
+            <div id="cabelos-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Cabelos e pelos são estruturas queratinizadas que protegem e regulam temperatura. No Brasil, a diversidade capilar (lisos a crespos) impulsiona o mercado de cuidados capilares (R$ 30 bilhões, ABIHPEC, 2024).</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Estrutura:</strong> Cutícula (escamas), córtex (fibras), medula (centro).</li>
+                        <li><strong>Tipos:</strong> Lisos (1A-C), ondulados (2A-C), cacheados (3A-C), crespos (4A-C).</li>
+                        <li><strong>Ativos:</strong> Pantenol (hidratação), queratina (reconstrução), óleos (nutrição).</li>
+                    </ul>
+                    A Anvisa regula silicones (máx. 5%) e exige testes de segurança.</p>
+                <h3>Práticas</h3>
+                <p>Cuidados por tipo:
+                    <ul>
+                        <li><strong>Lisos:</strong> Xampus leves, condicionadores com dimeticona.</li>
+                        <li><strong>Cacheados/Crespos:</strong> Óleos pesados (ex.: cupuaçu), leave-ins.</li>
+                    </ul>
+                </p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>Xampu com pantenol 2%.</li>
+                    <li>Leave-in com óleo de pracaxi.</li>
+                    <li>Máscara com queratina hidrolisada.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Identifique seu tipo de cabelo. Qual ativo é ideal?</li>
+                    <li>Pesquise a função da cutícula capilar.</li>
+                    <li>Compare produtos para cabelos lisos e crespos.</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Evite sulfatos em cabelos cacheados para prevenir ressecamento.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Cabelos" alt="Estrutura do cabelo com cutícula e córtex" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="desodorantes" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="desodorantes-content">Desodorantes</button>
+            <div id="desodorantes-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Desodorantes controlam o odor corporal e a transpiração. No Brasil, o mercado cresce 8% ao ano, com preferência por fórmulas naturais (ex.: óleos essenciais).</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Tipos:</strong> Desodorantes (neutralizam odor), antitranspirantes (reduzem suor).</li>
+                        <li><strong>Ativos:</strong> Cloridróxido de alumínio (10-15%, antitranspirante), óleos essenciais (antimicrobiano).</li>
+                    </ul>
+                    A Anvisa regula sais de alumínio (máx. 20%) e exige testes de irritação.</p>
+                <h3>Práticas</h3>
+                <p>Rotina:
+                    <ul>
+                        <li><strong>Aplicação:</strong> 2-3 borrifadas ou 1-2 passadas após o banho.</li>
+                        <li><strong>Cuidados:</strong> Evite em peles irritadas.</li>
+                    </ul>
+                </p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>Desodorante com óleo de melaleuca.</li>
+                    <li>Antitranspirante com cloridróxido 15%.</li>
+                    <li>Roll-on com extrato de açaí.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Compare um desodorante e um antitranspirante.</li>
+                    <li>Pesquise um ativo natural em desodorantes.</li>
+                    <li>Analise um rótulo de desodorante. Contém alumínio?</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Sais de alumínio podem causar manchas em roupas claras.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Desodorantes" alt="Frasco de desodorante com óleos essenciais" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="protetores" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="protetores-content">Protetores Solares</button>
+            <div id="protetores-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Protetores solares protegem a pele contra raios UV, prevenindo queimaduras, envelhecimento e câncer. No Brasil, a alta incidência solar (UV 8-11) torna o FPS essencial, com mercado de R$ 10 bilhões (ABIHPEC, 2024).</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Filtros:</strong> Químicos (avobenzona, 3%) absorvem UV; físicos (óxido de zinco, 10%) refletem.</li>
+                        <li><strong>FPS:</strong> Indica proteção UVB (ex.: FPS 30 bloqueia 97%).</li>
+                        <li><strong>PPD:</strong> Mede proteção UVA (mín. 1/3 do FPS).</li>
+                    </ul>
+                    A Anvisa exige testes de fotoproteção (ISO 24444) e rotulagem clara.</p>
+                <h3>Práticas</h3>
+                <p>Rotina:
+                    <ul>
+                        <li><strong>Aplicação:</strong> 2 g (rosto) ou 30 mL (corpo), reaplicar a cada 2 horas.</li>
+                        <li><strong>Cuidados:</strong> Use FPS 50+ em fototipos I-III, 30+ em IV-VI.</li>
+                    </ul>
+                </p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>FPS 50 com óxido de zinco e buriti.</li>
+                    <li>Gel FPS 30 oil-free para peles oleosas.</li>
+                    <li>Spray FPS 70 com avobenzona.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Escolha um FPS para fototipo IV. Justifique.</li>
+                    <li>Pesquise a diferença entre filtros químicos e físicos.</li>
+                    <li>Analise um rótulo de FPS. Contém PPD?</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Reaplique FPS após nadar ou suar, mesmo se “resistente à água”.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Protetores" alt="Aplicação de protetor solar na pele" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="bases" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="bases-content">Bases e Pós</button>
+            <div id="bases-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Bases e pós uniformizam o tom da pele e controlam oleosidade, sendo essenciais na maquiagem. No Brasil, bases oil-free e pós com FPS são tendências para peles tropicais.</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Bases:</strong> Líquidas, cremosas ou em bastão, com silicones (dimeticona, 5%) para textura.</li>
+                        <li><strong>Pós:</strong> Soltos ou compactos, com talco ou mica para acabamento.</li>
+                        <li><strong>Ativos:</strong> Niacinamida (2%), óxido de zinco (FPS).</li>
+                    </ul>
+                    A Anvisa regula pigmentos e exige testes de segurança.</p>
+                <h3>Práticas</h3>
+                <p>Rotina:
+                    <ul>
+                        <li><strong>Aplicação:</strong> 1-2 mL de base com esponja, pó com pincel.</li>
+                        <li><strong>Cuidados:</strong> Escolha tons adequados ao fototipo.</li>
+                    </ul>
+                </p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>Base líquida com niacinamida 2%.</li>
+                    <li>Pó compacto com FPS 15.</li>
+                    <li>Base oil-free com dimeticona.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Escolha uma base para pele oleosa. Justifique.</li>
+                    <li>Pesquise a função da mica em pós.</li>
+                    <li>Compare bases líquidas e cremosas.</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Bases comedogênicas podem obstruir poros. Prefira oil-free.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Bases" alt="Aplicação de base líquida na pele" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="maquiagem" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="maquiagem-content">Blushes e Sombras</button>
+            <div id="maquiagem-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Blushes e sombras realçam bochechas e olhos, com texturas e cores variadas. No Brasil, tons quentes e fórmulas de longa duração são populares devido ao clima.</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Blushes:</strong> Pó, creme ou líquido, com pigmentos (óxidos de ferro).</li>
+                        <li><strong>Sombras:</strong> Pó ou creme, com mica para brilho.</li>
+                        <li><strong>Ativos:</strong> Extratos naturais (ex.: açaí) para cuidado.</li>
+                    </ul>
+                    A Anvisa regula pigmentos e exige testes oftalmológicos para sombras.</p>
+                <h3>Práticas</h3>
+                <p>Rotina:
+                    <ul>
+                        <li><strong>Aplicação:</strong> Blush nas maçãs, sombra com pincel.</li>
+                        <li><strong>Cuidados:</strong> Remova completamente à noite.</li>
+                    </ul>
+                </p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>Blush em pó com extrato de açaí.</li>
+                    <li>Sombra cremosa com mica.</li>
+                    <li>Blush líquido com FPS 10.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Escolha uma sombra para olhos sensíveis. Justifique.</li>
+                    <li>Pesquise a função dos óxidos de ferro em blushes.</li>
+                    <li>Compare blushes em pó e líquidos.</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Sombras com glitter podem irritar olhos. Use com cuidado.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Maquiagem" alt="Aplicação de blush e sombra" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="perfumes" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="perfumes-content">Perfumes</button>
+            <div id="perfumes-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Perfumes são misturas de óleos essenciais e solventes que conferem fragrâncias. No Brasil, o mercado de fragrâncias cresce 7% ao ano, com notas tropicais (ex.: açaí, cupuaçu).</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Notas:</strong> Topo (cítricas), coração (florais), base (amadeiradas).</li>
+                        <li><strong>Concentração:</strong> Eau de Parfum (15-20%), Eau de Toilette (5-15%).</li>
+                        <li><strong>Fixadores:</strong> Almíscar, âmbar.</li>
+                    </ul>
+                    A Anvisa regula alérgenos (ex.: linalol, máx. 0,1%).</p>
+                <h3>Práticas</h3>
+                <p>Rotina:
+                    <ul>
+                        <li><strong>Aplicação:</strong> 2-3 borrifadas em pulsos e pescoço.</li>
+                        <li><strong>Cuidados:</strong> Evite áreas sensíveis.</li>
+                    </ul>
+                </p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>Eau de Parfum com notas de cupuaçu.</li>
+                    <li>Eau de Toilette com açaí.</li>
+                    <li>Perfume com fixador de âmbar.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Compare Eau de Parfum e Eau de Toilette.</li>
+                    <li>Pesquise uma nota tropical em perfumes.</li>
+                    <li>Analise um rótulo de perfume. Contém alérgenos?</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Perfumes com álcool podem ressecar a pele. Hidrate após o uso.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Perfumes" alt="Frasco de perfume com notas tropicais" class="section-image" loading="lazy">
+            </div>
+        </section>
+
+        <section id="xampus" class="accordion">
+            <button class="accordion-header" aria-expanded="false" aria-controls="xampus-content">Xampus</button>
+            <div id="xampus-content" class="accordion-content">
+                <h3>Conceito</h3>
+                <p>Xampus limpam o couro cabeludo e os fios, removendo sebo e resíduos. No Brasil, o mercado de xampus (R$ 15 bilhões, ABIHPEC, 2024) valoriza fórmulas sem sulfatos para cabelos cacheados.</p>
+                <h3>Fundamentos</h3>
+                <p>
+                    <ul>
+                        <li><strong>Surfactantes (10-20%):</strong> Sodium Laureth Sulfate (SLS), cocamidopropil betaína, limpam.</li>
+                        <li><strong>Ativos (1-5%):</strong> Pantenol, extratos (ex.: guaraná), tratam.</li>
+                        <li><strong>pH:</strong> 5,0-6,0, para equilíbrio do couro.</li>
+                    </ul>
+                    A Anvisa regula sulfatos e exige testes de irritação ocular.</p>
+                <h3>Práticas</h3>
+                <p>Rotina:
+                    <ul>
+                        <li><strong>Aplicação:</strong> 5-10 mL, massagear couro, enxaguar.</li>
+                        <li><strong>Frequência:</strong> 2-3x/semana para cabelos secos, diário para oleosos.</li>
+                    </ul>
+                </p>
+                <h3>Exemplos</h3>
+                <ul>
+                    <li>Xampu sem sulfato com guaraná.</li>
+                    <li>Xampu anticaspa com óleo de copaíba.</li>
+                    <li>Xampu hidratante com pantenol 2%.</li>
+                </ul>
+                <h3>Exercícios</h3>
+                <ol>
+                    <li>Escolha um xampu para cabelos cacheados. Justifique.</li>
+                    <li>Pesquise a função do SLS em xampus.</li>
+                    <li>Compare xampus com e sem sulfato.</li>
+                </ol>
+                <div class="highlight-box">
+                    <h4>Alerta</h4>
+                    <p>Xampus com sulfatos podem ressecar cabelos cacheados. Use alternativas suaves.</p>
+                </div>
+                <img src="https://via.placeholder.com/300x200?text=Xampus" alt="Frasco de xampu com extratos naturais" class="section-image" loading="lazy">
+            </div>
+        </section>
 
         <section id="condicionadores" class="accordion">
-            <div class="accordion-header">Condicionadores</div>
-            <div class="accordion-content">
+            <button class="accordion-header" aria-expanded="false" aria-controls="condicionadores-content">Condicionadores</button>
+            <div id="condicionadores-content" class="accordion-content">
                 <h3>Conceito</h3>
                 <p>Condicionadores são formulações cosméticas que restauram a hidratação, suavidade e maleabilidade dos cabelos, selando a cutícula, reduzindo carga estática e protegendo contra danos externos. No Brasil, o mercado de condicionadores é robusto (R$ 8 bilhões/ano, ABIHPEC, 2024), com alta demanda por produtos para cabelos cacheados e crespos, refletindo a diversidade capilar. Fórmulas com ativos amazônicos, como manteiga de cupuaçu e óleo de pracaxi, são tendências devido à sua capacidade de nutrição profunda e apelo sustentável.</p>
                 <h3>Fundamentos</h3>
@@ -94,13 +541,13 @@
                     <h4>Alerta</h4>
                     <p>Excesso de condicionador no couro pode causar oleosidade ou caspa. Aplique apenas no comprimento e pontas.</p>
                 </div>
-                <img src="https://via.placeholder.com/300x200?text=Condicionador" alt="Frasco de condicionador com ativos naturais" class="section-image">
+                <img src="https://via.placeholder.com/300x200?text=Condicionador" alt="Frasco de condicionador com ativos naturais, como manteiga de cupuaçu" class="section-image" loading="lazy">
             </div>
         </section>
 
         <section id="envelhecimento" class="accordion">
-            <div class="accordion-header">Envelhecimento Cutâneo</div>
-            <div class="accordion-content">
+            <button class="accordion-header" aria-expanded="false" aria-controls="envelhecimento-content">Envelhecimento Cutâneo</button>
+            <div id="envelhecimento-content" class="accordion-content">
                 <h3>Conceito</h3>
                 <p>O envelhecimento cutâneo é um processo natural e multifatorial que reduz a elasticidade, hidratação e firmeza da pele, resultando em rugas, flacidez e manchas. No Brasil, a exposição solar intensa (UV 8-11) acelera o envelhecimento extrínseco, enquanto a diversidade genética influencia o envelhecimento intrínseco. O mercado de cosméticos anti-idade cresce 10% ao ano (ABIHPEC, 2024), com foco em ativos antioxidantes e regeneradores.</p>
                 <h3>Fundamentos</h3>
@@ -150,13 +597,13 @@
                     <h4>Alerta</h4>
                     <p>Retinol pode causar fotossensibilidade. Use apenas à noite e combine com FPS 50+ durante o dia.</p>
                 </div>
-                <img src="https://via.placeholder.com/300x200?text=Envelhecimento" alt="Pele madura com cuidados anti-idade" class="section-image">
+                <img src="https://via.placeholder.com/300x200?text=Envelhecimento" alt="Pele madura com cuidados anti-idade, como sérum de retinol" class="section-image" loading="lazy">
             </div>
         </section>
 
         <section id="acne" class="accordion">
-            <div class="accordion-header">Acne</div>
-            <div class="accordion-content">
+            <button class="accordion-header" aria-expanded="false" aria-controls="acne-content">Acne</button>
+            <div id="acne-content" class="accordion-content">
                 <h3>Conceito</h3>
                 <p>Acne é uma condição inflamatória crônica dos folículos pilossebáceos, caracterizada por comedões, pápulas, pústulas e nódulos, afetando 80% dos adolescentes e 20% dos adultos no Brasil (SBCD, 2024). Fatores como umidade tropical e dieta rica em carboidratos agravam a prevalência. O mercado de cosméticos antiacne cresce 12% ao ano, com foco em produtos oil-free e ativos naturais.</p>
                 <h3>Fundamentos</h3>
@@ -199,13 +646,13 @@
                     <h4>Alerta</h4>
                     <p>Peróxido de benzoíla pode descolorir roupas e causar ressecamento. Use hidratantes e aplique em pequenas quantidades.</p>
                 </div>
-                <img src="https://via.placeholder.com/300x200?text=Acne" alt="Cuidados com pele acneica" class="section-image">
+                <img src="https://via.placeholder.com/300x200?text=Acne" alt="Cuidados com pele acneica, como gel de ácido salicílico" class="section-image" loading="lazy">
             </div>
         </section>
 
         <section id="discromias" class="accordion">
-            <div class="accordion-header">Discromias Cutâneas</div>
-            <div class="accordion-content">
+            <button class="accordion-header" aria-expanded="false" aria-controls="discromias-content">Discromias Cutâneas</button>
+            <div id="discromias-content" class="accordion-content">
                 <h3>Conceito</h3>
                 <p>Discromias são alterações na pigmentação da pele, como hiperpigmentação (melasma, manchas solares) ou hipopigmentação (vitiligo). No Brasil, o melasma afeta 30% das mulheres adultas (SBCD, 2024), agravado por exposição solar e calor tropical. O mercado de clareadores cresce 15% ao ano, com foco em ativos despigmentantes e fotoprotetores.</p>
                 <h3>Fundamentos</h3>
@@ -248,16 +695,16 @@
                     <h4>Alerta</h4>
                     <p>Hidroquinona pode causar ocronose (escurecimento) se usada por >6 meses. Alterne com outros ativos.</p>
                 </div>
-                <img src="https://via.placeholder.com/300x200?text=Discromias" alt="Cuidados com manchas na pele" class="section-image">
+                <img src="https://via.placeholder.com/300x200?text=Discromias" alt="Cuidados com manchas na pele, como sérum clareador" class="section-image" loading="lazy">
             </div>
         </section>
 
         <section id="peelings" class="accordion">
-            <div class="accordion-header">Peelings Químicos e Físicos</div>
-            <div class="accordion-content">
+            <button class="accordion-header" aria-expanded="false" aria-controls="peelings-content">Peelings Químicos e Físicos</button>
+            <div id="peelings-content" class="accordion-content">
                 <h3>Conceito</h3>
                 <p>Peelings removem camadas externas da pele para promover renovação celular, tratando acne, rugas, manchas e cicatrizes. No Brasil, são populares devido à alta prevalência de melasma e acne, com o mercado crescendo 18% ao ano (SBCD, 2024). Peelings químicos usam ácidos, enquanto físicos usam abrasivos.</p>
-                <h3>Fundamentals</h3>
+                <h3>Fundamentos</h3>
                 <p>
                     <ul>
                         <li><strong>Peelings Químicos:</strong> Usam ácidos para dissolver queratinócitos. Ex.: Ácido salicílico (10-30%, acne), glicólico (20-70%, rugas), tricloroacético (TCA, 10-35%, cicatrizes).</li>
@@ -333,13 +780,13 @@
                     <h4>Alerta</h4>
                     <p>Peelings químicos sem neutralização podem causar queimaduras. Sempre use neutralizantes (ex.: bicarbonato 5%).</p>
                 </div>
-                <img src="https://via.placeholder.com/300x200?text=Peeling" alt="Aplicação de peeling químico" class="section-image">
+                <img src="https://via.placeholder.com/300x200?text=Peeling" alt="Aplicação de peeling químico com ácido salicílico" class="section-image" loading="lazy">
             </div>
         </section>
 
         <section id="glossario" class="accordion">
-            <div class="accordion-header">Glossário</div>
-            <div class="accordion-content">
+            <button class="accordion-header" aria-expanded="false" aria-controls="glossario-content">Glossário</button>
+            <div id="glossario-content" class="accordion-content">
                 <h3>Termos Técnicos</h3>
                 <ul>
                     <li><strong>Ácido Hialurônico:</strong> Polissacarídeo que retém até 1.000x seu peso em água, usado como hidratante (0,5-2%) em cremes e séruns.</li>
@@ -375,8 +822,8 @@
         </section>
 
         <section id="bibliografia" class="accordion">
-            <div class="accordion-header">Bibliografia</div>
-            <div class="accordion-content">
+            <button class="accordion-header" aria-expanded="false" aria-controls="bibliografia-content">Bibliografia</button>
+            <div id="bibliografia-content" class="accordion-content">
                 <h3>Fontes Recomendadas</h3>
                 <ul>
                     <li>ANVISA. <i>Resolução RDC 7/2015: Regulamentação de Cosméticos</i>. Brasília, 2015.</li>
@@ -405,5 +852,6 @@
     </main>
 
     <script src="script.js"></script>
+    <script async src="/cdn-cgi/challenge-platform/scripts/jsd/main.js"></script>
 </body>
 </html>
