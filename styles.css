@@ -1,28 +1,189 @@
-document.getElementById('menu-btn').addEventListener('click', function() {
-    document.getElementById('sidebar').classList.toggle('active');
-});
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-document.getElementById('theme-toggle').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    this.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-});
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
 
-document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', function() {
-        const content = this.nextElementSibling;
-        content.classList.toggle('active');
-    });
-});
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-document.querySelectorAll('#sidebar a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-        });
-        document.getElementById('sidebar').classList.remove('active');
-    });
-});
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+#sidebar {
+    position: fixed;
+    top: 70px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #007BFF;
+    color: white;
+    transition: left 0.3s;
+    z-index: 999;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin: 15px 0;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 80px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #0056b3;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background-color: white;
+    color: #333;
+}
+
+body.dark-mode .accordion-content {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+body.dark-mode .comparison-table th {
+    background-color: #0056b3;
+}
+
+body.dark-mode .comparison-table td {
+    border-color: #444;
+    background-color: #2a2a2a;
+}
+
+.highlight-box {
+    background-color: #e7f3ff;
+    border-left: 5px solid #007BFF;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+body.dark-mode .highlight-box {
+    background-color: #2a3a5a;
+    border-left-color: #4da8ff;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    #sidebar {
+        width: 200px;
+        left: -200px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .accordion-header {
+        font-size: 16px;
+    }
+}
